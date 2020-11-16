@@ -7,9 +7,10 @@ class Transaction {
 
   value: number;
 
-  type: 'income' | 'outcome';
+  type: 'income' | 'outcome'; // existe somente esses dois tipos
 
   constructor({ title, value, type }: Omit<Transaction, 'id'>) {
+    // omit id
     this.id = uuid();
     this.title = title;
     this.value = value;
